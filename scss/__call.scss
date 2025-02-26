@@ -1,0 +1,157 @@
+.aside__call {
+  position: fixed;
+  right: 0;
+  width: 440px;
+  height: 100%;
+  font-family: 'TT Lakes Medium', sans-serif;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+  background-color: white;
+  z-index: 100;
+
+  display: none;
+
+  & .h2 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 32px;
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+  }
+
+  & .h2::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/h2__icon.png);
+    width: 3px;
+    height: 40px;
+    left: -34px;
+    top: -7px;
+  }
+
+  &l div:first-child {
+    margin-top: 24px;
+  }
+
+  & div:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  @media (max-width: 768px) {
+    width: 320px;
+
+    & .h2 {
+      margin-top: 104px;
+      margin-left: 16px;
+    }
+
+    & .h2::before {
+      background-image: url(../img/h2__icon2.png);
+      width: 4px;
+      left: -16px;
+      top: -7px;
+    }
+  }
+
+  &-close {
+    display: none;
+  }
+
+  &-open {
+    display: block;
+  }
+}
+
+.aside__close-feedback-call {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 62, 121);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -73px;
+  top: 32px;
+}
+
+.form__call {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.input__call {
+  width: 376px;
+  height: 48px;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  color: rgb(181, 182, 188);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'TT Lakes Medium', sans-serif;
+  padding: 12px 16px;
+}
+
+.input-textarea {
+  height: 118px;
+}
+
+.form__call-p {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: rgb(126, 126, 130);
+
+  & a {
+    color: rgb(255, 62, 121);
+  }
+}
+
+.button__call {
+  width: 136px;
+  height: 32px;
+  background-color: #ff3e79;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 23px;
+  margin-left: 240px;
+  font-size: 12px;
+
+  & span {
+    color: rgb(255, 255, 255);
+    font-family: 'TT Lakes Bold';
+    line-height: 24px;
+    padding-left: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aside__close-feedback-call {
+    left: 16px;
+    top: 24px;
+  }
+
+  .form__call {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .input__call {
+    width: 288px;
+  }
+
+  .button__call {
+    margin-top: 19px;
+    margin-left: 152px;
+  }
+}
+
+.continuation--hidden {
+  display: none;
+}

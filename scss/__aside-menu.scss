@@ -1,0 +1,160 @@
+//боди контейнер
+
+.body-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+
+  @media (max-width: 1440px) {
+    display: grid;
+    grid-template-columns: 0 1fr;
+  }
+}
+
+.aside {
+  width: 320px;
+  font-family: 'TT Lakes Medium', sans-serif;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+
+  @media (max-width: 1440px) {
+    &__menu-close {
+      display: none;
+    }
+
+    &__menu-open {
+      display: block;
+      box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+        -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+      z-index: 11;
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+.aside-header {
+  display: flex;
+  padding: 19px 24px;
+  align-items: center;
+  position: relative;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 62, 121);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+  &__icon-cps-width {
+    margin-left: 16px;
+  }
+
+  &__icon-loupe {
+    margin-left: 79px;
+  }
+
+  &__icon-cps {
+    width: 96.55px;
+    height: 50.81px;
+  }
+
+  &__icon--hover:hover img {
+    transform: rotate(300deg);
+    transition-duration: 1s;
+  }
+
+  &__icon--hover:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition-duration: 1s;
+  }
+}
+
+.aside-nav {
+  margin-top: 22px;
+  position: relative;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    color: rgb(27, 28, 33);
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 24px;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  &__item-icon {
+    position: absolute;
+    display: none;
+    background-image: url('../img/icon__active.svg');
+    width: 4px;
+    height: 32px;
+    left: -24px;
+    top: -5px;
+  }
+
+  &__item-active .aside-nav__item-icon {
+    display: block;
+  }
+
+  &__item-active {
+    color: rgb(126, 126, 130);
+  }
+}
+
+.aside-footer {
+  margin-left: 24px;
+  position: relative;
+  bottom: 10px;
+
+  &__socials {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__email {
+    display: block;
+    margin-top: 16px;
+    color: rgb(27, 28, 33);
+  }
+
+  &__tel {
+    margin-top: 12px;
+    color: rgb(27, 28, 33);
+    display: block;
+    font-family: 'TT Lakes Bold', sans-serif;
+    line-height: 32px;
+    font-size: 24px;
+  }
+
+  &__lang {
+    margin-top: 40px;
+  }
+
+  &__lang {
+    color: rgb(27, 28, 33);
+  }
+
+  &__lang .aside-footer__lang--active {
+    color: rgb(126, 126, 130);
+  }
+
+  &__lang button {
+    transform: scale(1);
+  }
+
+  &__lang button:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+  }
+}
